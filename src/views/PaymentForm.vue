@@ -60,7 +60,7 @@ export default {
   methods: {
     processPayment() {
       alert("Paiement réussi !");
-      this.$router.push("courses"); // Redirection vers la page d'accueil
+      this.$router.push("mycourses"); // Redirection vers la page d'accueil
     },
   },
 };
