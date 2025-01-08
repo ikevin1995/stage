@@ -56,13 +56,13 @@ export default {
         cvv: "",
       },
     };
+  },methods: {
+  processPayment() {
+    alert("Paiement réussi !");
+    this.$router.push('/mycourses'); // Chemin exact correspondant à la route définie dans index.js
   },
-  methods: {
-    processPayment() {
-      alert("Paiement réussi !");
-      this.$router.push("mycourses"); // Redirection vers la page d'accueil
-    },
-  },
+},
+
 };
 </script>
 

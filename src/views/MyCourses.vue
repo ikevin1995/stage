@@ -71,7 +71,6 @@ export default {
 }
 
 .list-item:hover {
-  background-color: #f9f9f9;
   transform: translateY(-5px);
 }
 

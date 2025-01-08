@@ -15,18 +15,28 @@
             </router-link>
           </li>
           <li>
+            <router-link to="/mycourses">
+              <i class="fas fa-book-open"></i> Mes Cours
+            </router-link>
+          </li>
+          <li>
             <router-link to="/add-teacher">
               <i class="fas fa-user-tie"></i> Ajouter Professeur
             </router-link>
           </li>
           <li>
-            <router-link to="/teacher">
+            <router-link to="/teachers">
               <i class="fas fa-users"></i> Liste des Professeurs
             </router-link>
           </li>
           <li>
             <router-link to="/students">
               <i class="fas fa-user-graduate"></i> Liste des Étudiants
+            </router-link>
+          </li>
+          <li>
+            <router-link to="/paylist">
+              <i class="fas fa-money-check-alt"></i> Paiement
             </router-link>
           </li>
           <li>
@@ -156,12 +166,12 @@
     display: none;
     flex-direction: column;
     cursor: pointer;
-    margin-right: 20px;
+    margin-left: 1%;
     z-index: 20;
   }
   
   .hamburger span {
-    background: white;
+    background: rgb(216, 10, 10);
     height: 3px;
     width: 25px;
     margin: 4px 0;
