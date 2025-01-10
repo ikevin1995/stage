@@ -39,7 +39,7 @@
      { path: '/dashboard', name: 'Dashboard', component: Dashboard },
      { path: '/users', name: 'UserList', component: Userlist },
      { path: '/edit-user/:id', name: 'EditUser', component: EditUser, props: true },
-     { path: '/payments', name: 'PaymentList', component: PaymentList },
+     { path: '/Paylist', name: 'paymentList', component: PaymentList },
      { path: '/contact', name: 'Contact', component: ContactPage },
      { path: '/add-user', name: 'AddUser', component: AddUser },
      { path: '/profile', name: 'Profile', component: ProfilPage },

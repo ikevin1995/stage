@@ -40,11 +40,6 @@
             </router-link>
           </li>
           <li>
-            <router-link to="/paylist">
-              <i class="fas fa-money-check-alt"></i> Paiement
-            </router-link>
-          </li>
-          <li>
             <router-link to="/user">
               <i class="fas fa-user"></i> Liste des Utilisateur
             </router-link>

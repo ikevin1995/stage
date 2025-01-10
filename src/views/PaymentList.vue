@@ -37,7 +37,7 @@
   import Sidebar from "@/components/Sidebar.vue";
   
   export default {
-    name: "PaymentList",
+    name: "paymentList",
     components: { Sidebar },
     data() {
       return {
