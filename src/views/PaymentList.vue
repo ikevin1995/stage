@@ -48,14 +48,13 @@
           { id: 4, name: "Alice Lefevre", email: "alice@example.com", fees: "200$", Date: "25/10/2024" },
         ],
       };
-    },
-    methods: {
-      details(id) {
-        console.log(`Afficher les détails pour le paiement avec l'ID ${id}`);
-        // Vous pouvez utiliser `this.$router.push` si vous avez une route pour afficher les détails
-        this.$router.push({ name: "Paylist", params: { id } });
-      },
-    },
+    },methods: {
+  details(id) {
+    console.log(`Afficher les détails pour le paiement avec l'ID ${id}`);
+    // Naviguer vers la route 'PaymentDetails' avec le paramètre 'id'
+    this.$router.push({ name: 'PaymentDetails', params: { id } });
+  },
+},
   };
   </script>
    

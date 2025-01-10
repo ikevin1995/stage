@@ -20,8 +20,9 @@
  import ProfilPage from '@/views/ProfilPage.vue';
  import EditProfile from '@/views/EditProfile.vue';
  import descriptionCours from '@/views/descriptionCours.vue';
-
  import MyCourses from '@/views/MyCourses.vue';
+ import FeesDetails from '@/views/FeesDetails';
+
 
 
  // Définition des routes
@@ -46,6 +47,7 @@
      { path: '/profile/edit', name: 'EditProfile', component: EditProfile },
      { path: '/course/:courseId', name: 'CourseDescription', component: descriptionCours, props: true },
      { path: '/mycourses', name: 'mycourses', component: MyCourses },
+     { path: '/payment-details/Id', name: 'PaymentDetails', component: FeesDetails },
  ];
 
  // Création du routeur
