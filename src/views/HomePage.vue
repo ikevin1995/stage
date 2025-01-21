@@ -105,7 +105,7 @@ export default {
     if (!selectedCourse) return;
 
     this.$router.push({
-      name: 'descriptionCours',
+      name: 'CourseDescription',
       params: { courseId: index },
       query: {
         title: selectedCourse.title,

@@ -8,7 +8,7 @@
       <!-- Détails du cours -->
       <div class="description-body">
         <p class="description-text">{{ courseDescription }}</p>
-        <p class="description-time"><strong>Durée :</strong> {{ courseTemps }}</p>
+        <p class="description-time"><strong>Durée de Cours :</strong> {{ courseTemps }}</p>
       </div>
   
       <!-- Bouton d'action -->
