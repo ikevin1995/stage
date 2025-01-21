@@ -1,24 +1,28 @@
 <template>
-
-    <!-- Main Content -->
-    <main class="dashboard-content">
-      <div class="welcome-section">
-        
-  <div class="list-container">
+  <main class="dashboard-content">
     
-    <div class="list-item" v-for="(item, index) in items" :key="index">
-      <h3>{{ item.name }}</h3>
-      <p class="description">{{ item.description }}</p>
-      <button class="follow-btn" @click="followCourse(item)">Suivre</button>
+  
+    <!-- Header -->
+    <div class="page-header">
+      <h1>Mes Cours</h1>
+      <p class="page-description">Explorez et suivez vos cours préférés!!!</p>
     </div>
-  </div>
+
+  
+    <!-- Liste des cours -->
+    <div class="list-container">
+      <div class="list-item" v-for="(item, index) in items" :key="index">
+        <div class="course-icon">
+          <i class="fas fa-book-open"></i>
+        </div>
+        <h3>{{ item.name }}</h3>
+        <p class="description">{{ item.description }}</p>
+        <button class="follow-btn" @click="followCourse(item)">Suivre</button>
       </div>
-    </main>
+    </div>
     
-    <!--Sidebar-->
-    <Sidebar/>
-      <!-- Router View for Page Content -->
-      <router-view />
+  <Sidebar/>
+  </main>
 </template>
 
 <script>
@@ -31,6 +35,9 @@ export default {
         { name: 'MAFINA', description: 'Matematique Financiere, ce cours est dedie aux comptables', showDetails: false },
         { name: 'Cours 2', description: 'Description du cours 2', showDetails: false },
         { name: 'Cours 3', description: 'Description du cours 3', showDetails: false },
+        { name: 'Cours 4', description: 'Description du cours 4', showDetails: false },
+        { name: 'Cours 4', description: 'Description du cours 4', showDetails: false },
+        { name: 'Cours 4', description: 'Description du cours 4', showDetails: false },
         { name: 'Cours 4', description: 'Description du cours 4', showDetails: false },
       ],
     };
@@ -51,27 +58,59 @@ export default {
   },
 };
 </script>
-
-<style>
-.list-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grille avec des colonnes adaptatives */
-  gap: 20px;
+<style scoped>
+/* Contenu principal */
+.dashboard-content {
   padding: 20px;
-  margin-left: 35vh;
+  margin-left: auto;
+  background-color: #f4f4f9;
 }
 
+/* En-tête de la page */
+.page-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  color: #003f5c;
+  margin-bottom: 10px;
+}
+
+.page-header .page-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Conteneur de la liste */
+.list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Carte de cours */
 .list-item {
   background-color: #ffffff;
   padding: 20px;
-  text-align: center;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .list-item:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Icône pour les cours */
+.course-icon {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 15px;
 }
 
 h3 {
@@ -81,35 +120,43 @@ h3 {
 }
 
 .description {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #666;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
-.details-btn,
 .follow-btn {
   display: inline-block;
   padding: 10px 20px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: bold;
-  color: #ffffff;
-  background-color: #007bff;
+  color: white;
+  background-color: #28a745;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.details-btn:hover {
-  background-color: #0056b3;
-}
-
-.follow-btn {
-  background-color: #28a745;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .follow-btn:hover {
   background-color: #218838;
+  transform: scale(1.05);
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-content {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .list-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 </style>
